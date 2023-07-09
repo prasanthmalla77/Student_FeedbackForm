@@ -162,10 +162,45 @@
 
 
 
-    <br />
+    <br /><button id="downloadBtn" class="download-button">Download as
+      PDF</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     <input type="submit" value="Submit Feedback" />
   </form>
   <p align="center">&copy; Prasanth Malla, B Tech , Information Technology 2020-2024</p>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+  <script>
+    const downloadBtn = document.getElementById('downloadBtn');
+    const feedbackForm = document.forms['google-sheet']; // Renamed variable
+
+    downloadBtn.addEventListener('click', () => {
+      const docDefinition = {
+        content: [
+          { text: 'Student Feedback Report', style: 'header' },
+          { text: ' ', style: 'spacing' } // Add spacing between sections
+        ],
+        styles: {
+          header: { fontSize: 16, bold: true, marginBottom: 10 },
+          spacing: { marginBottom: 15 }
+        }
+      };
+
+      // Iterate over form elements and add them to the PDF
+      Array.from(feedbackForm.elements).forEach((element) => {
+        if (element.type !== 'submit') {
+          docDefinition.content.push({
+            text: `${element.previousElementSibling.innerText}: ${element.value}`,
+            style: 'field'
+          });
+        }
+      });
+
+      pdfMake.createPdf(docDefinition).download('feedback_report.pdf');
+    });
+  </script>
 </body>
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbw3zcLa_sBmlpuCdnCd_zLOly1_FWpYGfA7x-t9E5M-WfrKyTOwDNtZ4PX7crjTIvZh/exec';
