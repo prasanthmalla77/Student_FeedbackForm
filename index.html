@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Student Feedback Report</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body width="100%">
+  <h2>STUDENT FEED-BACK REPORT</h2>
+
+  <form method="post" name="google-sheet" width="100%">
+    <label for="academic-year">Academic Year:</label>
+    <input type="text" id="academic-year" name="Academic Year" /><br />
+
+    <label for="year">Year:</label>
+    <input type="text" id="year" name="Year" /><br />
+
+    <label for="semester">Semester:</label>
+    <input type="text" id="semester" name="Semester" /><br />
+
+    <label for="branch">Branch:</label>
+    <input type="text" id="branch" name="Branch" /><br />
+
+    <label for="faculty">Faculty:</label>
+    <input type="text" id="faculty" name="Faculty" /><br />
+
+    <label for="total-students">Total Students:</label>
+    <input type="number" id="total-students" name="Total Students" /><br />
+
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="Subject" /><br />
+
+
+
+    <label for="Knowledge">Knowledge of the Subject:</label>
+    <select name="Knowledge of the Subject">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+    <label for="Coming">Coming well prepared for the Class:</label>
+    <select name="Coming well prepared for the Class">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+    <label for="Givng">Giving Clear Explanations:</label>
+    <select name="Giving Clear Explanations">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+    <label for="Command">Command of Language:</label>
+    <select name="Command of Language">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+    <label for="clear">Clear and Audible Voice:</label>
+    <select name="Clear and Audible Voice">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+    <label for="Holding">Holding the attention of students through the Class:</label>
+    <select name="Holding the attention of students through the Class">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+    <label for="Providing more matter than in the Text Book">Providing more matter than in the Text Book:</label>
+    <select name="Providing more matter than in the Text Book">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+    <label for="Capability to clear the doubts of Students">Capability to clear the doubts of Students:</label>
+    <select name="Capability to clear the doubts of Students">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+    <label for="Encouraging">Encouraging students to ask questions and participate in
+      Discussion:</label>
+    <select name="Encouraging students to ask questions and participate in Discussion">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+    <label for="Appreciating students as and when deserving">Appreciating students as and when deserving:</label>
+    <select name="Appreciating students as and when deserving">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+
+    <label for="Willingness to help students even out of Class">Willingness to help students even out of Class:</label>
+    <select name="Willingness to help students even out of Class">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+
+    <label for="Return of valued Test Papers / Records in Time">Return of valued Test Papers / Records in Time:</label>
+    <select name="Return of valued Test Papers / Records in Time">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+
+    <label for="Punctuality and following Time Table Schedule">Punctuality and following Time Table Schedule:</label>
+    <select name="Punctuality and following Time Table Schedule">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+
+    <label for="Coverage of Syllabus">Coverage of Syllabus:</label>
+    <select name="Coverage of Syllabus">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+
+    <label for="Impartial Treating all students alike">Impartial Treating all students alike:</label>
+    <select name="Impartial Treating all students alike">
+      <option value="Very Good">Very Good</option>
+      <option value="Good">Good</option>
+      <option value="Average">Average</option>
+      <option value="Below Average">Below Average</option>
+      <option value="Poor">Poor</option>
+    </select>
+
+
+
+    <br />
+    <input type="submit" value="Submit Feedback" />
+  </form>
+</body>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw3zcLa_sBmlpuCdnCd_zLOly1_FWpYGfA7x-t9E5M-WfrKyTOwDNtZ4PX7crjTIvZh/exec';
+  const form = document.forms['google-sheet'];
+  const submitButton = form.querySelector('input[type="submit"]');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // Disable the submit button to prevent multiple submissions
+    submitButton.disabled = true;
+
+    // Show the "Page loading" message
+    submitButton.value = 'Please wait... Submitting...';
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        // Show a success message
+        form.reset();
+        submitButton.value = 'Submit';
+        alert('Thank you for your feedback....');
+      })
+      .catch(error => {
+        // Show an error message
+        console.error('Error!', error.message);
+        submitButton.disabled = false;
+        submitButton.value = 'Submit';
+      });
+  });
+</script>
+
+
+</html>
