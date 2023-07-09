@@ -185,18 +185,22 @@
         styles: {
           header: { fontSize: 16, bold: true, marginBottom: 10 },
           spacing: { marginBottom: 15 }
-        }
+        },
+        watermark: { text: 'CONFIDENTIAL', color: 'red', opacity: 0.05 },
+        // ... Add more customization as needed
       };
 
       // Iterate over form elements and add them to the PDF
       Array.from(feedbackForm.elements).forEach((element) => {
         if (element.type !== 'submit') {
           docDefinition.content.push({
-            text: `${element.previousElementSibling.innerText}: ${element.value}`,
+            text: `${element.previousElementSibling.innerText}        ${element.value}`,
             style: 'field'
-          });
+          }, { text: ' ', style: 'spacing' });
+
         }
       });
+      docDefinition.styles.spacing = { marginBottom: 4 };
 
       pdfMake.createPdf(docDefinition).download('feedback_report.pdf');
     });
